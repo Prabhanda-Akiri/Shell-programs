@@ -1,16 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "enter the name"
+echo "enter the name:"
 
 read name
 
 if test -f $name
 	then
-	echo "The name entered is of a file"
+	echo -e "it's a file..!!\nThe contents in the file are:"
 	cat $name
+
 elif test -d $name
 	then
-	echo "The name entered is of a directory\nIt contains the following files:"
+	echo -e "It's a directory..!!\nThe directory contains the following files:"
 	ls $name/
 else
 
