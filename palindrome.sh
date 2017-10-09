@@ -2,15 +2,14 @@
 
 echo "enter the string"
 
-read string
+read str
 
-n=${#string}
 
-reverse=$(echo $string | rev)
+r=`echo "$str" | rev`
 
-echo "$reverse"
+echo "Reverse: $r"
 
-if(($string==$reverse))
+if [ $str = $r ];
 	then
 	echo "Yes,the enetred string is a palindrome"
 
